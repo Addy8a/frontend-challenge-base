@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+# 🚀 Frontend Challenge: User Directory Service
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Hola! Gracias por tu interés en unirte a nuestro equipo. Este reto está diseñado para que demuestres tus habilidades con nuestro stack principal: **React, TypeScript y Material UI (MUI)**.
 
-Currently, two official plugins are available:
+Queremos ver no solo qué tan bien programas, sino cómo tomas decisiones técnicas y cómo cuidas los detalles.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎯 El Objetivo
+Construir una aplicación que consulte una lista de usuarios de una API pública y los presente en una interfaz limpia, profesional y responsiva.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Stack Técnico
+* **Framework:** React (Vite)
+* **Lenguaje:** TypeScript
+* **Gestor de paquetes:** `pnpm`
+* **UI Library:** Material UI (MUI) v5+
+* **API:** [JSONPlaceholder - Users](https://jsonplaceholder.typicode.com/users)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📝 Tareas a realizar
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 1. Lista de Usuarios
+* Consumir los datos de la API al cargar la aplicación.
+* Renderizar los usuarios usando **MUI Table** o una cuadrícula de **Cards**.
+* Datos mínimos a mostrar: `Nombre`, `Username` y `Email`.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 2. Detalle de Usuario
+* Al interactuar con un usuario, abrir un componente **Dialog (Modal)** o un **Drawer** de MUI.
+* Mostrar información extendida: `Ciudad`, `Empresa` y `Teléfono`.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 3. Personalización y Estilo (MUI Deep Dive)
+* Aplicar estilos personalizados en encabezados o cards mediante la propiedad `sx`.
+* **Requisito:** Crear al menos un componente estilizado utilizando la utilidad `styled()` de MUI (por ejemplo, un botón custom o un contenedor con efectos hover).
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 4. Filtro (Plus) 🌟
+* Implementar un `TextField` que permita filtrar la lista por nombre en tiempo real.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📋 ¿Qué evaluaremos?
+
+| Criterio | Lo que buscamos |
+| :--- | :--- |
+| **Fundamentos** | Uso correcto de hooks (`useEffect`, `useState`). |
+| **TypeScript** | Tipado estricto de la respuesta de la API y de las props. |
+| **Dominio de MUI** | Elección correcta de componentes y manejo de su sistema de estilos. |
+| **Manejo de Git** | Commits descriptivos y flujo de trabajo organizado. |
+| **Autonomía** | Capacidad de investigar la documentación oficial para resolver bloqueos. |
+| **Limpieza** | Código legible, nombres claros y sin errores en consola. |
+
+---
+
+## ⚙️ Setup del Proyecto
+
+Este repositorio ya viene pre-configurado para ahorrarte tiempo. Sigue estos pasos:
+
+1.  **Clonar y preparar:**
+    ```bash
+    pnpm install
+    ```
+2.  **Ejecutar en desarrollo:**
+    ```bash
+    pnpm start
+    ```
+3.  **Git Flow:**
+    * Crea una rama con tu nombre: `feat/nombre-apellido`.
+    * Sigue el estándar de [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
+---
+
+## ⏱️ Entrega
+
+* **Tiempo estimado:** 2 a 4 horas.
+* **Plazo máximo:** 48 horas desde la recepción del reto.
+* **Formato:** Envía el enlace de tu repositorio (asegúrate de que sea público o danos acceso) o un archivo `.zip` excluyendo la carpeta `node_modules`.
+
+¡Mucho éxito, estamos ansiosos por ver tu solución! 🚀
